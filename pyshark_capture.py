@@ -1,14 +1,15 @@
 import pyshark
 import subprocess
-import tempfile
 import os
 
 
-def capture_webtraffic():
-    """ Captures network traffic from a specified interface ('Wi-Fi') for a given duration (10 seconds),
+def capture_webtraffic(interface = 'Wi-Fi'):
+    """ 
+    Captures network traffic from a specified interface for a given duration (10 seconds),
     saves it to a temporary pcapng file, then converts it to a standard pcap format.
-    The temporary file is subsequently deleted after conversion."""
-    interface = 'Wi-Fi'
+    The temporary file is subsequently deleted after conversion.
+    """
+    
     temp_output_file = "temp_pyshark_capture.pcapng"  # Temporary file for PyShark output
     final_output_file = "final_pyshark_capture.pcap"  # Converted file
 

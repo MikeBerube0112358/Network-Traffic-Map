@@ -26,7 +26,7 @@ def main():
     print(kml_file)
 
 def download_kml_file(kml_data):
-    '''Saves a kml file to specified path on MacOs'''
+    '''Saves a kml file to specified path'''
     try:
         downloads_path = input("Enter kml file download path destination: ")
         filename = 'ip_map.kml'
